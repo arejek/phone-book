@@ -1,7 +1,15 @@
 package com.example.phonebook.contact;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Contact {
-    private int id;
+
+    @Id
+    private Long id;
     private String name;
     private String surname;
     private int phone_number;
@@ -9,14 +17,14 @@ public class Contact {
     public Contact() {
     }
 
-    public Contact(int id, String name, String surname, int phone_number) {
+    public Contact(Long id, String name, String surname, int phone_number) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.phone_number = phone_number;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -32,7 +40,7 @@ public class Contact {
         return phone_number;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
