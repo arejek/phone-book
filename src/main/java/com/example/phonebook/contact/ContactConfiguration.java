@@ -12,8 +12,10 @@ public class ContactConfiguration {
     @Bean
     CommandLineRunner commandLineRunner(ContactRepository repository){
         return args -> {
-            Contact contact = new Contact(1L, "Robert", "Lewandowski", 9);
-            repository.saveAll(List.of(contact));
+            repository.saveAll(List.of(
+                    new Contact("Robert", "Lewandowski", "009 009 009"),
+                    new Contact("Arkadiusz", "Milik", "007 007 007"),
+                    new Contact("Piotr", "Zieliński", "020 020 020")));
         };
     }
 }
