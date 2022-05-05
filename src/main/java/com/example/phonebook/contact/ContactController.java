@@ -18,7 +18,17 @@ public class ContactController {
 
     @GetMapping
     public List<Contact> getContacts(){
-        return contactService.getContact();
+        return contactService.getContacts();
+    }
+
+    @GetMapping(path="/id/{contactId}")
+    public String getContactById(@PathVariable("contactId") Long contactId){
+        return contactService.getContactById(contactId).toString();
+    }
+
+    @GetMapping(path="/surname/{surname}")
+    public List<Contact> getContactBySurname(@PathVariable("surname") String surname){
+        return contactService.getContactBySurname(surname);
     }
 
     @PostMapping

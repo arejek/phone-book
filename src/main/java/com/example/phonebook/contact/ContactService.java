@@ -16,8 +16,25 @@ public class ContactService {
         this.contactRepository = contactRepository;
     }
 
-    public List<Contact> getContact(){
+    public List<Contact> getContacts(){
         return contactRepository.findAll();
+    }
+
+    public Contact getContactById(Long contactId) {
+        if (contactRepository.existsById(contactId)){
+            return contactRepository.getById(contactId);
+        } else {
+            throw new IllegalStateException("no such id");
+        }
+    }
+
+    public List<Contact> getContactBySurname(String surname){
+        List<Contact> contactList = contactRepository.findContactBySurname(surname);
+        if(contactList.isEmpty()){
+            throw new IllegalStateException("no contact with this surname");
+        } else {
+            return contactList;
+        }
     }
 
     public void addNewContact(Contact contact) {
