@@ -54,4 +54,14 @@ public class Contact {
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
     }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", phone_number='" + phone_number + '\'' +
+                '}';
+    }
 }
