@@ -21,7 +21,7 @@ public class ContactService {
     }
 
     public void addNewContact(Contact contact) {
-        Optional<Contact> contactOptional = contactRepository.findContactByPhoneNumber(contact.getPhoneNumber());
+        Optional<Contact> contactOptional = contactRepository.findContactByPhoneNumber(contact.getPhone_number());
         if(contactOptional.isPresent()){
             throw new IllegalStateException("phone number taken");
         }
