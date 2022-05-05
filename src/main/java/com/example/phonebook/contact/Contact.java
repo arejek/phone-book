@@ -12,15 +12,15 @@ public class Contact {
     private Long id;
     private String name;
     private String surname;
-    private String phone_number;
+    private String number;
 
     public Contact() {
     }
 
-    public Contact(String name, String surname, String phone_number) {
+    public Contact(String name, String surname, String number) {
         this.name = name;
         this.surname = surname;
-        this.phone_number = phone_number;
+        this.number = number;
     }
 
     public Long getId() {
@@ -35,8 +35,8 @@ public class Contact {
         return surname;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getNumber() {
+        return number;
     }
 
     public void setId(Long id) {
@@ -51,8 +51,8 @@ public class Contact {
         this.surname = surname;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setNumber(String number) {
+        this.number = number;
     }
 
     @Override
@@ -61,7 +61,7 @@ public class Contact {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", phone_number='" + phone_number + '\'' +
+                ", phone_number='" + number + '\'' +
                 '}';
     }
 }
