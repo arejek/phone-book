@@ -38,10 +38,18 @@ public class ContactService {
     }
 
     public void addNewContact(Contact contact) {
-        Optional<Contact> contactOptional = contactRepository.findContactByPhoneNumber(contact.getPhone_number());
+        Optional<Contact> contactOptional = contactRepository.findContactByNumber(contact.getNumber());
         if(contactOptional.isPresent()){
             throw new IllegalStateException("phone number taken");
         }
         contactRepository.save(contact);
+    }
+
+    public void deleteContact(Long id) {
+        if (contactRepository.existsById(id)){
+            contactRepository.deleteById(id);
+        } else {
+            throw new IllegalStateException("contact with id: " + id + " doesnt exist");
+        }
     }
 }
