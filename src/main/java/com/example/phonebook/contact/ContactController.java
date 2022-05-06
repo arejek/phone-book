@@ -36,6 +36,11 @@ public class ContactController {
         contactService.addNewContact(contact);
     }
 
+    @PutMapping(path="/id/{contactId}")
+    public void updateContact(@RequestBody Contact contact, @PathVariable("contactId") Long id){
+        contactService.updateContact(contact, id);
+    }
+
     @DeleteMapping(path="/id/{contactId}")
     public void deleteContact(@PathVariable("contactId") Long id){
         contactService.deleteContact(id);
