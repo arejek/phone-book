@@ -1,10 +1,16 @@
 package com.example.phonebook.contact;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
+@Getter @Setter @NoArgsConstructor @ToString
 public class Contact {
 
     @Id
@@ -14,54 +20,10 @@ public class Contact {
     private String surname;
     private String number;
 
-    public Contact() {
-    }
-
     public Contact(String name, String surname, String number) {
         this.name = name;
         this.surname = surname;
         this.number = number;
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getNumber() {
-        return number;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void setNumber(String number) {
-        this.number = number;
-    }
-
-    @Override
-    public String toString() {
-        return "Contact{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", phone_number='" + number + '\'' +
-                '}';
-    }
 }
