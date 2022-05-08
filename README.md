@@ -5,7 +5,7 @@ A simple phone book REST API using Spring Boot.
 ## Used technologies and tools
 
 - Spring Boot
-- **Spring Boot Dependencies:** Spring Web, Spring Data JPA, PostgreSQL Driver, Lombok
+- Spring Web, Spring Data JPA, PostgreSQL Driver, Lombok
 - Maven
 - IntelliJ
 - tested with Postman
@@ -13,8 +13,6 @@ A simple phone book REST API using Spring Boot.
 ## REST Methods
 
 ### GET
-
-GET
 
 | Url                                                                                         | Description                    |
 |---------------------------------------------------------------------------------------------|--------------------------------|
@@ -27,9 +25,9 @@ GET
 
 Add a contact by supplying JSON with new contact
 
-| Url                                         | Content-Type     | JSON                                                                                                    |
-|---------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------|
-| http://localhost:8080/api                   | application/json | {<br/>"name": "<new_contact_name"},<br/> "surname": "<new_contact_surname>",<br/>"number": "<phone_number>"<br/> } |
+| Url                                         | Content-Type     | JSON                                                                                                               |
+|---------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------|
+| http://localhost:8080/api                   | application/json | {<br/>"name": "<new_contact_name>",<br/> "surname": "<new_contact_surname>",<br/>"number": "<phone_number>"<br/> } |
 
 
 
@@ -37,9 +35,9 @@ Add a contact by supplying JSON with new contact
 
 Update contact (or create new if it doesn't exist)
 
-| Url                                         | Content-Type     | JSON                                                                                                    |
-|---------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------|
-| http://localhost:8080/api                   | application/json | {<br/>"name": "<contact_name"},<br/> "surname": "<contact_surname>",<br/>"number": "<phone_number>"<br/> } |
+| Url                                         | Content-Type     | JSON                                                                                                       |
+|---------------------------------------------|------------------|------------------------------------------------------------------------------------------------------------|
+| http://localhost:8080/api                   | application/json | {<br/>"name": "<contact_name>",<br/> "surname": "<contact_surname>",<br/>"number": "<phone_number>"<br/> } |
 
 
 
